@@ -6,7 +6,15 @@
     <title>轻首页</title>
     <link rel="shortcut icon" href="./images/goose.ico">
     <link rel="stylesheet" href="./css/style.css">
-
+    <style>
+        body {
+            /* background-image: url(./images/mountain.jpg); */
+            background-color: #36568d;
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
 
 </head>
 
@@ -15,20 +23,18 @@
         <div class="container">
             <div class="main">
                 <h1 class="logo">
-                    <img src="./images/goose.png" onclick="playGoose()">
+                    <img src="./images/goose-moon.png" onclick="playGoose()">
                     <audio id="gooseCall" src="./audio/GooseCall.mp3" preload="auto"></audio>
-                    <span>轻首页</span>
+                    <span>轻首页 · 中秋快乐 ~~</span>
                 </h1>
+                <form target="_blank" method="get" action="https://www.baidu.com/s">
+                    <input type="text" placeholder="请输入关键词" name="word" class="search-word" />
+                    <input type="submit" value="搜索" class="search-button">
+                </form>
             </div>
         </div>
     </header>
     <div class="main-index">
-        <div class="search-box">
-            <form target="_blank" method="get" action="https://www.baidu.com/s">
-                <input type="text" placeholder="请输入关键词" name="word" class="search-word" />
-                <input type="submit" value="搜索" class="search-button">
-            </form>
-        </div>
         <div class="type-box">
             <div class="container-box">
                 <div class="type-name-container"><strong class="type-name">教学</strong></div>
@@ -44,7 +50,8 @@
                 <div class="link-name"><a href="http://www.youth.zju.edu.cn/sztz/" target="_blank">素质拓展网</a></div>
                 <div class="link-name"><a href="http://jxzygl.zju.edu.cn/default.html" target="_blank">教学资源管理</a></div>
                 <div class="link-name"><a href="http://appservice.zju.edu.cn/zdjw/grkb" target="_blank">个人课表查询</a></div>
-                         </div> 
+            </div> 
+
             <div class="container-box">
                 <div class="type-name-container"><strong class="type-name">信息化服务</strong></div>
                 <div class="link-name"><a href="https://golaw.whu.edu.cn/index.htm" target="_blank">法研工作网</a></div>
@@ -94,7 +101,7 @@
             </div> 
 
             <div class="container-box"> 
-                <div class="type-name-container2"><strong class="type-name">实用工具</strong></div>
+                <div class="type-name-container"><strong class="type-name">实用工具</strong></div>
                 <div class="link-name"><a href="https://ol.woobx.cn/" target="_blank">一个木函</a></div>
                 <div class="link-name"><a href="https://tool.browser.qq.com/" target="_blank">在线工具箱</a></div>
                 <div class="link-name"><a href="http://www.xmsj.org/" target="_blank">听歌下载</a></div>
@@ -135,7 +142,7 @@
                 <div class="link-name"><a href="https://www.geogebra.org/" target="_blank">Geogebra</a></div>
                 <div class="link-name"><a href="https://www.wjx.cn/" target="_blank">问卷星</a></div>
                 <div class="link-name"><a href="https://bilibili.iiilab.com/" target="_blank">视频下载</abra></div>
-                <div class="link-name"><a href="https://tool.chinaz.com/" target="_blank">站长工具</a></div>
+                <div class="link-name"><a href="https://tool.chinaz.com/" target="_bla。nk">站长工具</a></div>
             </div>
         
             <div class="container-box"> 
@@ -150,7 +157,7 @@
                 <div class="link-name"><a href="https://www.jd.com/" target="_blank">京东商城</a></div>
                 <div class="link-name"><a href="https://www.taobao.com/" target="_blank">淘宝网</a></div>
             </div>
-         
+        
             <div class="container-box"> 
                 <div class="type-name-container"><strong class="type-name">其它</strong></div>
                 <div class="link-name"><a id="wlcs" href="https://www.speedtest.cn/" target="_blank">网络测速</a></div>
@@ -160,14 +167,16 @@
                 <div class="link-name"><a id="about" href="http://speedtest.zju.edu.cn/" target="_blank">校网测速</a></div>
                 <div class="link-name"><a id="ssyqsm" href="https://zhfw.zju.edu.cn/65686/list.htm" target="_blank">浙大黄页</a></div>
                 <div class="link-name"><a id="ssyqsm" href="https://www.cc98.org/topic/4979979" target="_blank">搜索引擎说明</a></div>
-
             </div>
         </div>
+        <img class="rabbit" src="./images/rabbit.png">
+        <img class="tianya" src="./images/tianya.png">
+        <img class="moon-1" src="./images/moon-1.png">
+        <img class="moon-2" src="./images/moon-2.png">
+        <img class="moon-3" src="./images/moon-3.png">
+        <img class="moon-4" src="./images/moon-4.png">
+        <img class="moon-5" src="./images/moon-5.png">  
     </div>
-    <!-- <footer class="footer">
-        <div> 
-        </div>
-    </footer> -->
     <script>
         function playGoose() {
             var music = document.getElementById("gooseCall");
