@@ -85,7 +85,7 @@ body {
 }
 
 .yiyan-box {
-    display: flex;
+    display: none;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 20px;
