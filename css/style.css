@@ -72,7 +72,7 @@ body {
 }
 
 .header-right {
-    margin-right: 20px;
+    margin: 0 20px;
 }
 
 .header-right svg {
@@ -194,6 +194,22 @@ body {
 
 /* 小设备 (平板电脑和大型手机，600 像素及以上) */
 @media only screen and (max-width: 768px) {
+
+    .header-left {
+        margin: 0 10px;
+    }
+
+    .logo span {
+        display: none;
+    }
+
+    .search-button {
+        display: none;
+    }
+
+    .header-right {
+        margin: 0 10px;
+    }
 
     .main-index {
         width: 100%;
