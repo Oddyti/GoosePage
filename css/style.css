@@ -224,9 +224,10 @@ body {
 
 .schedule {
     width: 400px;
+    padding: 0 10px;
 }
 
-@media only screen and (max-width: 1330px) and (min-width: 1020px) {
+@media only screen and (max-width: 1350px) and (min-width: 1040px) {
 
     .websites {
         width: 300px;
@@ -237,7 +238,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 1020px) and (min-width: 700px) {
+@media only screen and (max-width: 1040px) and (min-width: 720px) {
     
     .yiyan-box {
         width: 70%;
@@ -252,7 +253,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 720px) {
 
     .sidebar {
         display: none;
