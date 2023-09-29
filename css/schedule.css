@@ -1,0 +1,76 @@
+:root{
+    --bg-color-1: #e6f4ff;
+    --fr-color--1: #0ea1e6;
+    --bg-color-2: #eaf2ff;
+    --fr-color--2: #6191f7;
+    --bg-color-3: #eeedff;
+    --fr-color--3: #7d7be7;
+    --bg-color-4: #fcebcd;
+    --fr-color--4: #f99a0b;
+    --bg-color-5: #ffeff0;
+    --fr-color--5: #e85e76;
+    /* --bg-color: #36568d;
+    --fr-color: #ffe4c6; */
+
+}
+.classtable{
+    FONT-VARIANT: JIS04;
+    width: 42%;
+    /* margin-top: 40px; */
+}
+.classtableOwner{
+    color: var(--fr-color);
+    font-size: 18px;
+    padding-left: 20px;
+    font-weight: 800;
+    margin-top: 5px;
+    /* line-height: 1; */
+}
+table {
+    empty-cells: show;
+    border-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+th.weekname{
+    width: auto;
+    font-size: 16px;
+}
+th.time{
+    height: auto;
+    line-height: 14px;
+    width: 70px;
+}
+th {
+    border-radius: 5px;
+    /* background-color: #fafcfe; */
+    padding: 5px 5px;
+    font-weight: 800;
+    font-size: 15px;
+    box-sizing: border-box;
+    line-height: 15px;
+    color: var(--fr-color);
+}
+td {
+    width: 60px;
+    border-radius: 5px;
+    text-align: left;
+    font-weight: 800;
+    padding: 0px 5px;
+    box-sizing: border-box;
+    border: 2px solid #e85e76;
+}
+.classname{
+    font-weight: 800;
+    font-size: 14px;
+}
+.classroom{
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.classes{
+    background-color: var(--fr-color);
+    color: var(--bg-color);
+}
+
