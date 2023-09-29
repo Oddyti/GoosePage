@@ -9,18 +9,15 @@
     --fr-color--4: #f99a0b;
     --bg-color-5: #ffeff0;
     --fr-color--5: #e85e76;
-    /* --bg-color: #36568d;
-    --fr-color: #ffe4c6; */
 
 }
 
-.classtableOwner{
+.classtable-owner{
     color: var(--fr-color);
     font-size: 18px;
     padding-left: 20px;
     font-weight: 800;
-    margin-top: 5px;
-    /* line-height: 1; */
+    margin: 10px 0px;
 }
 
 table {
@@ -28,9 +25,6 @@ table {
     border-spacing: 4px;
 }
 th {
-    /* border-radius: 5px; */
-    /* background-color: #fafcfe; */
-    /* padding: 2px 4px; */
     font-weight: 800;
     font-size: 15px;
     box-sizing: border-box;
@@ -40,12 +34,12 @@ th {
 
 th.weekname{
     font-size: 16px;
-    padding: 2px 0;
+    padding: 5px 0;
     width: 12%;
 }
 
 th.time{
-    padding: 0 2px;
+    padding: 5px 2px;
     line-height: 14px;
     width: 12%;
 }
@@ -55,13 +49,13 @@ td {
     border-radius: 5px;
     text-align: left;
     padding: 0px px;
-    /* border: 2px solid #e85e76; */
+    /* border: 1px solid #e85e76; */
 }
 .classname{
     text-align: center;
     font-weight: 800;
     font-size: 14px;
-    /* margin: 0px; */
+    padding: 0 5px;
 }
 .classroom{
     font-weight: 800;

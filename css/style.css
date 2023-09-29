@@ -1,17 +1,17 @@
 :root {
-    --bg--color: #36568d;
+    --bg-color: #36568d;
     --fr-color: #ffe4c6;
 }
 
 body {
-    background-color: var(--bg--color);
+    background-color: var(--bg-color);
 }
 
 .header {
     width: 100%;
     border-radius: 4px;
-    background-color: #3b5aae;
-    height: 50px;
+    background-color: #3f619c;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,11 +28,11 @@ body {
 
 .logo img {
     width: 20px;
-    margin: 0 10px;
+    margin: 0 20px;
 }
 
 .logo span {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     color: #ffffff;
 }
@@ -54,6 +54,8 @@ body {
 .search-word {
     border-radius: 5px;
     border: none;
+    outline: none;
+    background: var(--fr-color);
     flex-grow: 1;
     height: 40px;
     padding: 0 10px;
@@ -65,9 +67,10 @@ body {
     border: none;
     background-color: transparent;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     width: 50px;
+    margin: 0 10px;
     height: 40px;
 }
 
@@ -76,56 +79,91 @@ body {
 }
 
 .header-right svg {
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
     fill: #ffffff
 }
 
 .yiyan-box {
-    width: 50%;
-    position: relative;
+    display: flex;
+    margin: auto;
     margin-top: 50px;
-    margin-bottom: 60px;
-    margin-right: auto;
-    margin-left: auto;
+    margin-bottom: 20px;
+    width: 50%;
+    flex-direction: column;
     color: var(--fr-color);
 }
 
-.bracket-left {
-    font-size: 26px;
-    height: 20px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
+.yiyan-content {
+    display: flex;
+    height: 80px;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.bracket-right {
+.bracket-left {
+    display: flex;
+    align-items: start;
     font-size: 26px;
-    height: 20px;
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
 }
 
 .yiyan-word {
     font-size: 22px;
-    height: 40px;
     text-align: center;
-    /* line-height: 20px; */
-    padding: 30px 40px;
+    padding: 20px 20px;
 }
+
+.bracket-right {
+    display: flex;
+    align-items: end;
+    font-size: 26px;
+}
+
 
 .yiyan-author {
-    height: 16px;
+    display: flex;
+    justify-content: flex-end;
     font-size: 16px;
-    float: right;
-    margin-top: 30px;
+    margin-top: 20px;
+    padding-right: 10px;
 }
+.content {
+    display: flex;
 
+}
+.sidebar {
+    width: 150px;
+    flex-grow: 1;
+}
+.left-sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.moon {
+    margin: 80px;
+}
+.moon img{
+    width: 50px;
+}
+.right-sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tianya {
+    margin-bottom: 300px;
+}
+.tianya img{
+    width: 80px;
+}
+.rabbit img{
+    width: 150px;
+}
 .main-index {
     max-width: 1210px;
     margin: 0 auto;
-    background-color: var(--bg--color);
+    background-color: var(--bg-color);
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
@@ -135,7 +173,7 @@ body {
 
 .websites {
     display: flex;
-    max-width: 600px;
+    max-width: 620px;
     /* width: 60%; */
     flex-wrap: wrap;
     justify-content: center;
@@ -152,6 +190,7 @@ body {
     width: 100%;
     font-size: 18px;
     font-weight: 600;
+    margin: 10px 0;
     padding-left: 16px;
     color: var(--fr-color)
 }
@@ -173,7 +212,7 @@ body {
     flex-grow: 1;
     text-decoration: none;
     transition: all 0.3s ease;
-    color: var(--bg--color);
+    color: var(--bg-color);
 }
 
 .websitename a:hover {
@@ -184,21 +223,73 @@ body {
 }
 
 .schedule {
-    width: 500px;
-    border: 1px solid #ffffff;
+    width: 400px;
 }
 
-.classtable {
-    width: 300px;
+@media only screen and (max-width: 1330px) and (min-width: 1020px) {
+
+    .websites {
+        width: 300px;
+    }
+
+    .yiyan-box {
+        width: 70%;
+    }
 }
 
-/* 小设备 (平板电脑和大型手机，600 像素及以上) */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1020px) and (min-width: 700px) {
+    
+    .yiyan-box {
+        width: 70%;
+        margin-top: 35px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+    .websites {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .yiyan-box {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .bracket-left {
+        font-size: 20px;
+    }
+
+    .yiyan-word {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 10px 10px;
+    }
+
+    .bracket-right {
+        font-size: 20px;
+    }
+
+    .yiyan-author {
+        font-size: 14px;
+        margin-top: 10px;
+        padding-right: 20px;
+    }
 
     .header-left {
         margin: 0 10px;
     }
 
+    .logo img {
+        margin: 0;
+    }
     .logo span {
         display: none;
     }
@@ -219,13 +310,3 @@ body {
         width: 100%;
     }
 }
-
-/* 中型设备（平板电脑，768 像素及以上） */
-/* @media only screen and (min-width: 768px) {
-    .main-index {
-        width: 100%;
-    }
-    .schedule {
-        width: 100%;
-    }
-}  */
