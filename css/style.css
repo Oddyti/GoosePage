@@ -192,7 +192,7 @@ body {
     width: 300px;
 }
 
-/* 小设备 (平板电脑和大型手机，600 像素及以上)
+/* 小设备 (平板电脑和大型手机，600 像素及以上) */
 @media only screen and (max-width: 768px) {
 
     .main-index {
@@ -202,7 +202,7 @@ body {
     .schedule {
         width: 100%;
     }
-} */
+}
 
 /* 中型设备（平板电脑，768 像素及以上） */
 /* @media only screen and (min-width: 768px) {
