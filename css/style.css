@@ -1,8 +1,15 @@
+@font-face {
+    font-family: "朱雀仿宋";
+    src: url(../fonts/ZhuqueFangsong-Regular.ttf);
+}
 :root {
     --bg-color: #36568d;
     --fr-color: #ffe4c6;
 }
-
+html,
+body {
+    font-family: "朱雀仿宋";
+}
 body {
     background-color: var(--bg-color);
 }
@@ -85,7 +92,7 @@ body {
 }
 
 .yiyan-box {
-    display: none;
+    /* display: none; */
     margin: auto;
     margin-top: 50px;
     margin-bottom: 20px;
@@ -108,6 +115,7 @@ body {
 }
 
 .yiyan-word {
+    font-family: "朱雀仿宋";
     font-size: 22px;
     text-align: center;
     padding: 20px 20px;
