@@ -49,6 +49,7 @@ td {
     border-radius: 5px;
     text-align: left;
     padding: 0px px;
+    vertical-align: top;
     /* border: 1px solid #e85e76; */
 }
 .classname{
