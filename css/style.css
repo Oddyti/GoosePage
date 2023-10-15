@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "zhuquefangsong";
+    src: url(../fonts/ZhuqueFangsong-Regular.ttf);
+}
 :root {
     --bg-color: #36568d;
     --fr-color: #ffe4c6;
@@ -92,6 +96,7 @@ body {
     width: 50%;
     flex-direction: column;
     color: var(--fr-color);
+    font-family: "zhuquefangsong";
 }
 
 .yiyan-content {
