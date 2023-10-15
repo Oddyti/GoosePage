@@ -13,11 +13,11 @@
 }
 
 .classtable-owner{
-    color: var(--fr-color);
+    color: var(--text-color);
     font-size: 18px;
     padding-left: 20px;
     font-weight: 800;
-    margin: 10px 0px;
+    margin: 20px 0px;
 }
 
 table {
@@ -29,7 +29,7 @@ th {
     font-size: 15px;
     box-sizing: border-box;
     line-height: 15px;
-    color: var(--fr-color);
+    color: var(--text-color);
 }
 
 th.weekname{
@@ -66,7 +66,6 @@ td {
 }
 
 .classes{
-    background-color: var(--fr-color);
-    color: var(--bg-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
-
