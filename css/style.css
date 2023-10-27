@@ -192,20 +192,27 @@ body {
 /* 课表 */
 .schedule {
     width: 400px;
-    margin: 0 10px;
+    margin: 8px 8px;
     padding: 0 10px;
     border-radius: 10px;
     background-color: var(--fr-color);
 }
 
+/* 中间内容 */
+.main-content {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 620px;
+    margin: 8px 8px;
+}
 /* 网站 */
 .websites {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
-    max-width: 620px;
-    margin: 0 5px;
     padding: 15px 0;
     border-radius: 10px;
     background-color: var(--fr-color);
@@ -264,6 +271,18 @@ body {
     border-radius: inherit;
     background: #4e70aa
 } */
+
+.sameday {
+    margin: 16px 0;
+    border-radius: 10px;
+    background-color: var(--fr-color);
+}
+
+.sameday p {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
 
 .footer {
     display: flex;
