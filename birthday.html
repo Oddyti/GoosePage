@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/蛋糕.ico">
+    <title>🎂瓜呆生日快乐~</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #F1EAFF;
+        }
+        .play-btn {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 50px;
+            left: 50px;
+            width: 48px;
+            height: 48px;
+            border-radius: 24px;
+            background: #fdf4f5;
+        }
+
+        #playPauseButton {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .icon {
+            font-size: 24px;
+            color: #5f3a69;
+        }
+
+        #playIcon {
+            display: none;
+        }
+
+        .card {
+            width: 860px;
+            height: 540px;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            -webkit-perspective: 1200px;
+            perspective: 1200px;
+            transition: 1s;
+        }
+        .card:hover {
+            transform: rotate(-5deg);
+        }
+        .card:hover .outside {
+            transform: rotateY(-130deg);
+        }
+        .outside,
+        .inside {
+            height: 100%;
+            width: 50%;
+            position: absolute;
+            left: 50.1%;
+        }
+
+        .inside {
+            background: linear-gradient(to right, #f0ebed, #FDF4F5 20%);
+            line-height: 3px;
+            padding: 0 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            left: 50%;
+        }
+
+        .outside {
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            z-index: 1;
+            transform-origin: left;
+            transition: 2s;
+        }
+
+        .front,
+        .back {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            transform: rotateX(0deg);
+        }
+
+        .front {
+            background-color: #FDF4F5;
+        }
+
+        .back {
+            transform: rotateY(180deg);
+            background: linear-gradient(to left, #dedadb, #FDF4F5 30%);
+        }
+        .image-container {
+            transform: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .image-container p {
+            margin-top: 20px;
+            color: #5f3a69;
+            font-size: 16px;
+            font-family: "Sriracha", STKaiti;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke: 0.3px;
+        }
+        .image-container img {
+            width: 80%;
+        }
+        .cake {
+            width: 100%;
+            position: absolute;
+            bottom: 30px;
+        }
+
+        .top-layer,
+        .middle-layer,
+        .bottom-layer {
+            height: 60px;
+            width: 200px;
+            background-repeat: repeat;
+            background-size: 60px 100px;
+            background-position: 28px 0;
+            background-image: linear-gradient(transparent 50px,
+                    #DFCCFB 50px,
+                    #DFCCFB 60px,
+                    transparent 60px),
+                radial-gradient(circle at 30px 5px, #dedadb 30px, #BEADFA 31px);
+            border-radius: 10px 10px;
+            position: relative;
+            margin: auto;
+
+        }
+
+        .middle-layer {
+            transform: scale(0.85);
+            top: 6px;
+        }
+
+        .top-layer {
+            transform: scale(0.7);
+            top: 26px
+        }
+
+        .candle {
+            height: 45px;
+            width: 15px;
+            background: repeating-linear-gradient(45deg,
+                    #E7BCDE 0,
+                    #E7BCDE 5px,
+                    #FED9ED 5px,
+                    #FED9ED 10px);
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            bottom: 142px;
+        }
+
+        .candle::before {
+            content: "";
+            position: absolute;
+            height: 16PX;
+            width: 16px;
+            background-color: #ffb61a;
+            border-radius: 0 50% 0 50%;
+            bottom: 48px;
+            transform: rotate(45deg);
+            left: -1px
+        }
+
+        .front-text p {
+            font-size: 24px;
+            font-family: "Sriracha";
+            text-transform: capitalize;
+            margin-top: 50px;
+            text-align: center;
+            letter-spacing: 6px;
+            color: #5f3a69;
+        }
+        .inside-text {
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke: 0.3px;
+            height: 90%;
+            width: 80%;
+            line-height: 2rem;
+            text-align: left;
+            color: #5f3a69;
+            font-size: 20px;
+            font-family: "Sriracha", STKaiti;
+        }
+        .inside h1 {
+            font-size: 120px;
+            line-height: 120px;
+        }
+    </style>
+</head>
+
+<body class="inactive">
+    <audio id="LifeIsWonderfull" src="./audio/LifeIsWonderfull.mp3" preload="auto" loop></audio>
+    <script src="index.min.js"></script>
+    <canvas id="my-canvas"></canvas>
+    <div class="play-btn">
+        <button id="playPauseButton" onclick="togglePlayPause()">
+            <span id="playIcon" class="icon">&#9654;</span>
+            <span id="pauseIcon" class="icon">&#10074;&#10074;</span>
+        </button>
+    </div>
+    <div class="card">
+        <div class="outside">
+            <div class="front">
+                <div class="front-text">
+                    <p>Life is wonderfull<br>with you</p>
+                    <p style="font-size: 50px; margin: 0;">🍐</p>
+                </div>
+                <div class="cake">
+                    <div class="candle"></div>
+                    <div class="top-layer"></div>
+                    <div class="middle-layer"></div>
+                    <div class="bottom-layer"></div>
+                </div>
+            </div>
+            <div class="back">
+                <div class="image-container">
+                    <img src="images/Group.png" alt="">
+                    <p>想想当初我们俩会不会料到瓜呆会在武汉呢</p>
+                </div>
+            </div>
+        </div>
+        <div class="inside">
+            <div class="inside-text">
+                <p style="font-size: 24px;">生日快乐！</p>
+                <p style="text-indent: 2em;">
+                    终于瓜呆也和我一样大啦！『 Life is wonderfull. Life goes full circle 』希望瓜呆的生活是随时都可以唱出这两句歌词的生活！
+                </p>
+                <p style="text-indent: 2em;">歌里也唱着『It takes a night to make it dawn』夜晚总会过去，形形色色的人也只是活在他们自己的世界，瓜呆的世界仍然是由瓜呆自己决定的。所以祝愿瓜呆的世界一直是充满着快乐和舒服的世界！</p>
+                <p style="text-indent: 2em;">祝愿瓜呆睡觉都是深度，起床都及时，出门刚好有校车！</p>
+                <p style="text-align: right;">小胖🐷</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function confetti_start(size, can_rotete) {
+            let confettiSettings = { target: 'my-canvas', size: size, rotate: can_rotete };
+            let confetti = new ConfettiGenerator(confettiSettings);
+            confetti.render();
+        }
+        confetti_start(2, true);
+
+        var audio = document.getElementById("LifeIsWonderfull");
+        var playIcon = document.getElementById("playIcon");
+        var pauseIcon = document.getElementById("pauseIcon");
+        audio.volume = 0.5
+        // audio.play();
+
+        function togglePlayPause() {
+        if (audio.paused) {
+            audio.play();
+            playIcon.style.display = "none";
+            pauseIcon.style.display = "inline";
+        } else {
+            audio.pause();
+            playIcon.style.display = "inline";
+            pauseIcon.style.display = "none";
+        }
+        }
+    </script>
+</body>
+
+</html>

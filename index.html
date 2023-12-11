@@ -10,19 +10,22 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/schedule.css">
     <script src="./js/yiyan.js" type="text/javascript"></script>
+    <script src="./js/old_days.js" type="text/javascript"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body onload="mySentence()">
+<body onload="mySentence(); old_days()">
+    <script src="js/birthday.js"></script>
+    <canvas id="my-canvas"></canvas>
     <div class="wallpaper">
-        <img src="./images/wallpaper1.jpg" alt="wallpaper">
+        <img src="./images/dog.jpg" alt="wallpaper">
     </div>
     <div class="header">
         <div class="header-left">
             <div class="logo">
-                <img src="./images/goose.png"  onclick="playGoose()">
-                <audio id="gooseCall" src="./audio/GooseCall.mp3" preload="auto"></audio>
-                <span>轻首页</span>
+                <img src="./images/蛋糕.svg"  onclick="birthdayPage()">
+                <audio id="LifeIsWonderfull" src="./audio/LifeIsWonderfull.m4a" preload="auto"></audio>
+                <span>生日快乐！</span>
             </div>
         </div>
         <div class="searchbox">
@@ -44,7 +47,9 @@
         <div id = "setAuthor" class="yiyan-author"></div>
     </div>
     <div class="content">
-        <div class="sidebar left-sidebar"></div>
+        <div class="sidebar left-sidebar">
+            <!-- <img src="./images/dog1.png"> -->
+        </div>
         <div class="main-index">
             <div class="schedule">
                 <!-- 梨的课表 -->
@@ -64,7 +69,6 @@
                     <tr>
                         <th class="time">1<br>8:00<br>8:45</th>
                         <td></td>
-                        
                         <td></td>
                         <td></td>
                         <td></td>
@@ -74,12 +78,11 @@
                     </tr>
                     <tr>
                         <th class="time">2<br>8:50<br>9:35</th>
-
-                        <td rowspan="4" class="classes"><p class="classname">刑法总论</p><p class="classroom">1区计</p><p class="classroom">104</p></td>
-                        <td rowspan="4" class="classes"><p class="classname">知识产权法</p><p class="classroom">法</p><p class="classroom">326</p></td>
-                        <td rowspan="3" class="classes"><p class="classname">经济法</p><p class="classroom">法</p><p class="classroom">331</p></td>
-                        <td rowspan="4" class="classes"><p class="classname">宪法学</p><p class="classroom">1区计</p><p class="classroom">102</p></td>
-                        <td rowspan="4" class="classes"><p class="classname">法律职业伦理与规范</p><p class="classroom">1区理</p><p class="classroom">105</p></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -87,9 +90,18 @@
                         <th class="time">3<br>10:00<br>10:45</th>
                         <td></td>
                         <td></td>
+                        <td></td>
+                        <td rowspan="3" class="classes"><p class="classname">马社科</p><p class="classroom">1区计</p><p class="classroom">104</p></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th class="time">4<br>10:50<br>11:35</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -98,18 +110,26 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th class="time">6<br>13:25<br>14:10</th>
-                        <td rowspan="3" class="classes"><p class="classname">企业公司法</p><p class="classroom">法</p><p class="classroom">331</p></td>
-                        <td rowspan="4" class="classes"><p class="classname">法理学专题</p><p class="classroom">1区3</p><p class="classroom">404</p></td>
-                        <td rowspan="3" class="classes"><p class="classname">新中特</p><p class="classroom">   1区枫</p><p class="classroom">214</p></td>
-                        <td rowspan="4" class="classes"><p class="classname">民法学总论</p><p class="classroom">1区1</p><p class="classroom">302</p></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
                         <th class="time">7<br>14:15<br>15:00</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -119,9 +139,15 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th class="time">9<br>16:15<br>17:00</th>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -144,7 +170,7 @@
                         <td rowspan="3" class="classes"><p class="classname">论文写作指导</p><p class="classroom">单周</p><p class="classroom">模拟法庭</p></td>
                         <td></td>
                         <td rowspan="3" class="classes"><p class="classname">法学专题研究</p><p class="classroom">法</p><p class="classroom">121</p></td>
-                        <td rowspan="3" class="classes"><p class="classname">习法制思想</p><p class="classroom">法</p><p class="classroom">122</p></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -154,9 +180,11 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th class="time">13<br>20:30<br>21:15</th>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -202,7 +230,7 @@
                     <tr>
                         <th class="time">1<br>8:00<br>8:45</th>
                         <td></td>
-                        <td rowspan="4" class="classes"><p class="classname">新中特</p><p class="classroom">西溪艺术楼D</p><p class="classroom">102</p></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -213,6 +241,7 @@
                         <th class="time">2<br>8:50<br>9:35</th>
                         <td></td>
                         <td></td>
+                        <td rowspan="4" class="classes"><p class="classname">高级操作系统</p><p class="classroom">教7</p><p class="classroom">408</p></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -244,20 +273,20 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
                     </tr>
                     <tr>
                         <th class="time">6<br>13:25<br>14:10</th>
                         <td></td>
+                        <td rowspan="3" class="classes"><p class="classname">西方音乐艺术</p><p class="classroom">北3</p><p class="classroom">110</p></td>
                         <td></td>
-                        <td rowspan="2" class="classes"><p class="classname">论文指导</p><p class="classroom">教1</p><p class="classroom">234</p></td>
-                        <td rowspan="4" class="classes"><p class="classname">最优化理论与算法</p><p class="classroom">教7</p><p class="classroom">406</p></td>
-                        <td rowspan="4" class="classes"><p class="classname">工程伦理</p><p class="classroom">教7</p><p class="classroom">306</p></td>
+                        <td rowspan="3" class="classes"><p class="classname">自然辩证法</p><p class="classroom">蒙民伟</p><p class="classroom">225</p></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
                         <th class="time">7<br>14:15<br>15:00</th>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -278,6 +307,8 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th class="time">10<br>17:05<br>17:50</th>
@@ -292,15 +323,16 @@
                     <tr>
                         <th class="time">11<br>18:50<br>19:35</th>
                         <td></td>
-                        <td rowspan="2" class="classes"><p class="classname">专业英语</p><p class="classroom">教11</p><p class="classroom">411</p></td>
-                        <td rowspan="4" class="classes"><p class="classname">现代飞行器总体技术</p><p class="classroom">教7</p><p class="classroom">406</p></td>
                         <td></td>
                         <td></td>
+                        <td></td>
+                        <td rowspan="4" class="classes"><p class="classname">航天射频</p><p class="classroom">教11</p><p class="classroom">411</p></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
                         <th class="time">12<br>19:40<br>20:25</th>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -432,21 +464,54 @@
                         <div class="websitename"><a href="https://s.weibo.com/top/summary" target="_blank">微博热搜</a></div>
                     </div>
                 </div>
-                <div class="sameday">
-                    <p>那年今日</p>
+                <div class="old-days">
+                    <div class="old-days-title">那年今日</div>
+                    <div class="old-days-content">
+                        <div class="old-days-img-box">
+                            <img id = 'old-days-img' src="">
+                        </div>
+                        <div class="old-days-text-box">
+                            <div id = 'old-days-date' class="old-days-date">
+                                
+                            </div>
+                            <div id = 'old-days-text' class="old-days-text">
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            
+            
         </div>
-        <div class="sidebar right-sidebar"></div>
+        <div class="sidebar right-sidebar">
+            <!-- <img src="./images/dog2.png"> -->
+        </div>
     </div>
     <div class="footer">
-        <div class="footer-text">Powered by Xiao Pang</div>
+        <div class="footer-text">
+            Powered by Xiao Pang
+            <br>
+            <h3>瓜呆生日特别版</h3>
+        
+        </div>
+        <!-- <img src="./images/halloween.png"> -->
     </div>
     <script>
         function playGoose() {
             var music = document.getElementById("gooseCall");
             music.play();
         }
+        function birthdayPage(){
+            window.location.href = "pages/birthday.html";
+        }
+        function confetti_start(size, can_rotete) {
+            let confettiSettings = { target: 'my-canvas', size: size, rotate: can_rotete };
+            let confetti = new ConfettiGenerator(confettiSettings);
+            confetti.render();
+        }
+        confetti_start(2, true);
+    </script>
     </script>
 </body>
 
