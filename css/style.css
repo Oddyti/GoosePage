@@ -5,32 +5,34 @@
 
 :root {
     /* --bg-color: #e4e4e4; */
-    --bg-color: #f1eaff;
-    --box-color: rgba(253, 244, 245, 0.9);
-    --tab-color: rgba(228, 221, 242, 0.9);
+    --bg-color: rgb(27, 47, 65);
+    --box-color: rgba(27, 47, 65, 0.6);
+    --tab-color: rgba(196, 68, 54, 0.9);
     --input-color: rgba(252, 240, 242);
-    --text-color-light: #5f3a69;
-    --text-color-dark: #5f3a69;
+    --text-color-light: #ffffff;
+    --text-color-dark: #ffffff;
 }
 
 body {
-    background-color: #f1eaff;
+    background-color: #1e374c;
     margin: 0;
     padding: 0;
 }
 
-#my-canvas {
+/* #my-canvas {
     position: fixed;
     z-index: -1;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-}
+} */
+
+
 .wallpaper {
-    display: none;
+    /* display: none; */
     position: fixed;
-    z-index: -1;
+    z-index: -2;
     overflow: hidden;
 
     height: 100%;
@@ -117,12 +119,54 @@ body {
     margin: 0 20px;
 }
 
-.header-right svg {
+.menu svg {
     height: 30px;
     width: 30px;
     fill: var(--text-color-light);
 }
 
+.menu {
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.menu:hover .submenu{
+    display: block;
+}
+
+.menu:hover svg{
+    fill: #736e6e;
+}
+.submenu {
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    margin: 0;
+    padding: 5px 0;
+    top: 100%;
+    width: 120px;
+    border-radius: 10px;
+    background-color: var(--box-color);
+    text-align: center;
+}
+
+.submenu li {
+    border-radius: 8px;
+    padding: 5px 0;
+    margin: 5px 10px;
+}
+
+.submenu li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color-dark)
+}
+
+.submenu li:hover {
+    background-color: var(--tab-color);
+}
 /* 一言 */
 .yiyan-box {
     display: flex;
