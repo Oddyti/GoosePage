@@ -1,0 +1,318 @@
+@font-face {
+    font-family: "zhuquefangsong";
+    src: url(../fonts/ZhuqueFangsong-Regular.ttf);
+}
+:root {
+    --bg-color: #36568d;
+    --fr-color: #ffe4c6;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.header {
+    width: 100%;
+    border-radius: 4px;
+    background-color: #3f619c;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    margin: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 20px;
+    margin: 0 20px;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+
+.searchbox {
+    flex-grow: 1;
+    max-width: 500px;
+    min-width: 150px;
+}
+
+.searchbox form {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search-word {
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: var(--fr-color);
+    flex-grow: 1;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.search-button {
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    width: 50px;
+    margin: 0 10px;
+    height: 40px;
+}
+
+.header-right {
+    margin: 0 20px;
+}
+
+.header-right svg {
+    height: 30px;
+    width: 30px;
+    fill: #ffffff
+}
+
+.yiyan-box {
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 50%;
+    flex-direction: column;
+    color: var(--fr-color);
+    font-family: "zhuquefangsong";
+}
+
+.yiyan-content {
+    display: flex;
+    height: 80px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bracket-left {
+    display: flex;
+    align-items: start;
+    font-size: 26px;
+}
+
+.yiyan-word {
+    font-size: 22px;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.bracket-right {
+    display: flex;
+    align-items: end;
+    font-size: 26px;
+}
+
+
+.yiyan-author {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 16px;
+    margin-top: 20px;
+    padding-right: 10px;
+}
+.content {
+    display: flex;
+
+}
+.sidebar {
+    width: 150px;
+    flex-grow: 1;
+}
+.left-sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.moon {
+    margin: 80px;
+}
+.moon img{
+    width: 50px;
+}
+.right-sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tianya {
+    margin-bottom: 300px;
+}
+.tianya img{
+    width: 80px;
+}
+.rabbit img{
+    width: 150px;
+}
+.main-index {
+    max-width: 1210px;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.websites {
+    display: flex;
+    max-width: 620px;
+    /* width: 60%; */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.website-box {
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.typename {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+    padding-left: 16px;
+    color: var(--fr-color)
+}
+
+.websitename {
+    width: 30%;
+    display: flex;
+    text-align: center;
+    background-color: var(--fr-color);
+    margin: 2px;
+    font-size: 15px;
+    font-weight: 800;
+    border-radius: 2px;
+    line-height: 45px;
+}
+
+.websitename a {
+    /* width: 100%; */
+    flex-grow: 1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: var(--bg-color);
+}
+
+.websitename a:hover {
+    color: var(--fr-color);
+    font-size: 15px;
+    font-weight: 800;
+    background: #4e70aa
+}
+
+.schedule {
+    width: 400px;
+    padding: 0 10px;
+}
+
+@media only screen and (max-width: 1350px) and (min-width: 1040px) {
+
+    .websites {
+        width: 300px;
+    }
+
+    .yiyan-box {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1040px) and (min-width: 720px) {
+    
+    .yiyan-box {
+        width: 70%;
+        margin-top: 35px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+    .websites {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .yiyan-box {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .bracket-left {
+        font-size: 20px;
+    }
+
+    .yiyan-word {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 10px 10px;
+    }
+
+    .bracket-right {
+        font-size: 20px;
+    }
+
+    .yiyan-author {
+        font-size: 14px;
+        margin-top: 10px;
+        padding-right: 20px;
+    }
+
+    .header-left {
+        margin: 0 10px;
+    }
+
+    .logo img {
+        margin: 0;
+    }
+    .logo span {
+        display: none;
+    }
+
+    .search-button {
+        display: none;
+    }
+
+    .header-right {
+        margin: 0 10px;
+    }
+
+    .main-index {
+        width: 100%;
+    }
+
+    .schedule {
+        width: 100%;
+    }
+}

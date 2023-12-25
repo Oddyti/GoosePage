@@ -6,7 +6,7 @@
 
     <title>轻首页</title>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="./images/goose.ico">
+    <link rel="shortcut icon" href="../../images/goose.ico">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/schedule.css">
     <script src="./js/yiyan.js" type="text/javascript"></script>
@@ -15,17 +15,15 @@
 </head>
 
 <body onload="mySentence(); old_days()">
-    <script src="js/birthday.js"></script>
-    <canvas id="my-canvas"></canvas>
     <div class="wallpaper">
-        <img src="./images/dog.jpg" alt="wallpaper">
+        <img src="../../images/dog.jpg" alt="wallpaper">
     </div>
     <div class="header">
         <div class="header-left">
             <div class="logo">
-                <img src="./images/蛋糕.svg"  onclick="birthdayPage()">
-                <audio id="LifeIsWonderfull" src="./audio/LifeIsWonderfull.m4a" preload="auto"></audio>
-                <span>生日快乐！</span>
+                <img src="../../images/goose-moon.png"  onclick="playGoose()">
+                <audio id="gooseCall" src="../../audio/GooseCall.mp3" preload="auto"></audio>
+                <span>轻首页</span>
             </div>
         </div>
         <div class="searchbox">
@@ -35,17 +33,7 @@
             </form>
         </div>
         <div class="header-right">
-            <div class="menu">
-                <svg t="1695882612628" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4016" width="200" height="200"><path d="M79.954 686.724h864.092v85.945h-864.092zM79.954 469.027h864.092v85.945h-864.092zM79.954 251.331h864.092v85.943h-864.092z" fill="" p-id="4017"></path></svg>
-                <ul class="submenu">
-                    <li><a href="pages/christmas/christmas.html">圣诞特别版</a></li>
-                    <li><a href="pages\autumn-dog\autumn-dog.html">秋日狗狗版</a></li>
-                    <li><a href="pages\halloween\halloween.html">万圣节特别版</a></li>
-                    <li><a href="pages\basic\basic.html">基础版</a></li>
-                    <li><a href="pages\mid-autumn\mid-autumn.html">中秋特别版</a></li>
-                    <li><a href="index.html">待完善中</a></li>
-                </ul>
-            </div>
+            <svg t="1695882612628" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4016" width="200" height="200"><path d="M79.954 686.724h864.092v85.945h-864.092zM79.954 469.027h864.092v85.945h-864.092zM79.954 251.331h864.092v85.943h-864.092z" fill="" p-id="4017"></path></svg>
         </div>
     </div>
     <div class="yiyan-box">
@@ -88,9 +76,9 @@
                     </tr>
                     <tr>
                         <th class="time">2<br>8:50<br>9:35</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td rowspan="4" class="classes"><p class="classname">刑法总论</p><p class="classroom">1区计</p><p class="classroom">104</p></td>
+                        <td rowspan="4" class="classes"><p class="classname">知识产权法</p><p class="classroom">法</p><p class="classroom">326</p></td>
+                        <td rowspan="3" class="classes"><p class="classname">经济法</p><p class="classroom">法</p><p class="classroom">331</p></td>\
                         <td></td>
                         <td></td>
                         <td></td>
@@ -101,15 +89,10 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td rowspan="3" class="classes"><p class="classname">马社科</p><p class="classroom">1区计</p><p class="classroom">104</p></td>
-                        <td></td>
-                        <td></td>
                         <td></td>
                     </tr>
                     <tr>
                         <th class="time">4<br>10:50<br>11:35</th>
-                        <td></td>
-                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -122,23 +105,19 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
                     </tr>
                     <tr>
                         <th class="time">6<br>13:25<br>14:10</th>
+                        <td rowspan="3" class="classes"><p class="classname">企业公司法</p><p class="classroom">法</p><p class="classroom">331</p></td>
                         <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td rowspan="3" class="classes"><p class="classname">新中特</p><p class="classroom">   1区枫</p><p class="classroom">214</p></td>
+                        <td rowspan="4" class="classes"><p class="classname">民法学总论</p><p class="classroom">1区1</p><p class="classroom">302</p></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
                         <th class="time">7<br>14:15<br>15:00</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -150,13 +129,9 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
                     </tr>
                     <tr>
                         <th class="time">9<br>16:15<br>17:00</th>
-                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -180,7 +155,7 @@
                         <td rowspan="3" class="classes"><p class="classname">论文写作指导</p><p class="classroom">单周</p><p class="classroom">模拟法庭</p></td>
                         <td></td>
                         <td rowspan="3" class="classes"><p class="classname">法学专题研究</p><p class="classroom">法</p><p class="classroom">121</p></td>
-                        <td></td>
+                        <td rowspan="3" class="classes"><p class="classname">习法制思想</p><p class="classroom">法</p><p class="classroom">122</p></td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -190,11 +165,9 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
                     </tr>
                     <tr>
                         <th class="time">13<br>20:30<br>21:15</th>
-                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -499,12 +472,7 @@
         </div>
     </div>
     <div class="footer">
-        <div class="footer-text">
-            Powered by Xiao Pang
-            <br>
-            <h3>瓜呆生日特别版</h3>
-        
-        </div>
+        <div class="footer-text">Powered by Xiao Pang</div>
         <!-- <img src="./images/halloween.png"> -->
     </div>
     <script>
@@ -512,16 +480,7 @@
             var music = document.getElementById("gooseCall");
             music.play();
         }
-        function birthdayPage(){
-            window.location.href = "pages/birthday.html";
-        }
-        function confetti_start(size, can_rotete) {
-            let confettiSettings = { target: 'my-canvas', size: size, rotate: can_rotete };
-            let confetti = new ConfettiGenerator(confettiSettings);
-            confetti.render();
-        }
-        confetti_start(2, true);
-    </script>
+
     </script>
 </body>
 

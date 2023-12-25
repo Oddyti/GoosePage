@@ -1,0 +1,71 @@
+:root{
+    --bg-color-1: #e6f4ff;
+    --fr-color--1: #0ea1e6;
+    --bg-color-2: #eaf2ff;
+    --fr-color--2: #6191f7;
+    --bg-color-3: #eeedff;
+    --fr-color--3: #7d7be7;
+    --bg-color-4: #fcebcd;
+    --fr-color--4: #f99a0b;
+    --bg-color-5: #ffeff0;
+    --fr-color--5: #e85e76;
+
+}
+
+.classtable-owner{
+    color: var(--text-color);
+    font-size: 18px;
+    padding-left: 20px;
+    font-weight: 800;
+    margin: 20px 0px;
+}
+
+table {
+    empty-cells: show;
+    border-spacing: 4px;
+}
+th {
+    font-weight: 800;
+    font-size: 15px;
+    box-sizing: border-box;
+    line-height: 15px;
+    color: var(--text-color);
+}
+
+th.weekname{
+    font-size: 16px;
+    padding: 5px 0;
+    width: 12%;
+}
+
+th.time{
+    padding: 5px 2px;
+    line-height: 14px;
+    width: 12%;
+}
+
+td {
+    width: 12%;
+    border-radius: 5px;
+    text-align: left;
+    padding: 0px px;
+    vertical-align: top;
+    /* border: 1px solid #e85e76; */
+}
+.classname{
+    text-align: center;
+    font-weight: 800;
+    font-size: 14px;
+    padding: 0 5px;
+}
+.classroom{
+    font-weight: 800;
+    font-size: 12px;
+    margin: 0px;
+    padding-left: 5px;
+}
+
+.classes{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}

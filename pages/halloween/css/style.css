@@ -5,43 +5,30 @@
 
 :root {
     /* --bg-color: #e4e4e4; */
-    --bg-color: #f1eaff;
-    --box-color: rgba(253, 244, 245, 0.9);
-    --tab-color: rgba(228, 221, 242, 0.9);
-    --input-color: rgba(252, 240, 242);
-    --text-color-light: #5f3a69;
-    --text-color-dark: #5f3a69;
+    --bg-color: #949494;
+    --fr-color: #d0cfc6;
+    --text-color: #221306;
+    --hl-cloro: #949494;
 }
 
 body {
-    background-color: #f1eaff;
+    background-color: var(--bg-color);
     margin: 0;
     padding: 0;
 }
 
-#my-canvas {
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
 .wallpaper {
     display: none;
-    position: fixed;
+    position: absolute;
     z-index: -1;
     overflow: hidden;
 
-    height: 100%;
-    /* width: 100%; */
-
+    height: 400px;
 }
 
 .wallpaper img {
     width: 100%;
 }
-
 /* 导航栏 */
 .header {
     display: flex;
@@ -54,7 +41,7 @@ body {
     margin: 0 auto;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: var(--box-color);
+    background-color: var(--fr-color);
 }
 
 .header-left {
@@ -67,14 +54,14 @@ body {
 }
 
 .logo img {
-    width: 42px;
+    width: 45px;
     margin: 0 20px;
 }
 
 .logo span {
     font-size: 20px;
     font-weight: 600;
-    color: var(--text-color-light);
+    color: var(--text-color);
 }
 
 .searchbox {
@@ -108,7 +95,7 @@ body {
     border-radius: 5px;
     border: none;
     background-color: transparent;
-    color: var(--text-color-light);
+    color: var(--text-color);
     font-size: 20px;
     font-weight: 500;
 }
@@ -117,53 +104,10 @@ body {
     margin: 0 20px;
 }
 
-.menu svg {
+.header-right svg {
     height: 30px;
     width: 30px;
-    fill: var(--text-color-light);
-}
-
-.menu {
-    position: relative;
-    height: 30px;
-    width: 30px;
-}
-
-.menu:hover .submenu{
-    display: block;
-}
-
-.menu:hover svg{
-    fill: #736e6e;
-}
-.submenu {
-    display: none;
-    list-style-type: none;
-    position: absolute;
-    margin: 0;
-    padding: 5px 0;
-    top: 100%;
-    width: 120px;
-    border-radius: 10px;
-    background-color: var(--box-color);
-    text-align: center;
-}
-
-.submenu li {
-    border-radius: 8px;
-    padding: 5px 0;
-    margin: 5px 10px;
-}
-
-.submenu li a {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--text-color-dark)
-}
-
-.submenu li:hover {
-    background-color: var(--tab-color);
+    fill: var(--text-color);
 }
 
 /* 一言 */
@@ -176,7 +120,7 @@ body {
     margin-top: 50px;
     margin-bottom: 40px;
 
-    color: var(--text-color-light);
+    color: var(--text-color);
 }
 
 .yiyan-content {
@@ -244,7 +188,6 @@ body {
     width: 60%;
     padding-right: 10%;
 }
-
 /* 中间主内容 */
 .main-index {
     display: flex;
@@ -259,19 +202,10 @@ body {
 /* 课表 */
 .schedule {
     width: 400px;
-    /* margin: 0 10px; */
-    margin: 0px 0;
+    margin: 0 10px;
     padding: 0 10px;
     border-radius: 10px;
-    background-color: var(--box-color);
-}
-
-/* 主要内容，包含网址导航和那年今日 */
-.main-content {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 0px 10px;
+    background-color: var(--fr-color);
 }
 
 /* 网站 */
@@ -281,10 +215,12 @@ body {
     justify-content: center;
 
     max-width: 620px;
+    margin: 0 5px;
     padding: 15px 0;
     border-radius: 10px;
-    background-color: var(--box-color);
+    background-color: var(--fr-color);
 }
+
 
 .website-box {
     display: flex;
@@ -298,8 +234,8 @@ body {
     width: 100%;
     margin: 10px 0;
     padding-left: 16px;
-
-    color: var(--text-color-light);
+    
+    color: var(--text-color);
     font-size: 18px;
     font-weight: 600;
 }
@@ -307,31 +243,29 @@ body {
 .websitename {
     /* 此处用flex是为了a可以用grow来填充整个box */
     display: flex;
-
+    
     width: 30%;
     margin: 2px;
     border-radius: 6px;
-    background-color: var(--tab-color);
+    background-color: var(--bg-color);
 
     font-size: 14px;
     font-weight: 600;
     line-height: 45px;
     text-align: center;
 }
-
 .websitename :hover {
-    box-shadow: 2px 0px 6px 0 rgba(0, 0, 0, 0.18), -2px 0px 6px 0 rgba(0, 0, 0, 0.18), 0px 5px 6px 0 rgba(0, 0, 0, 0.18);
+    box-shadow: 2px 0px 6px 0 rgba(0,0,0,0.18),-2px 0px 6px 0 rgba(0,0,0,0.18),0px 5px 6px 0 rgba(0,0,0,0.18);
     -webkit-transition: box-shadow 0.3s ease-out;
     transition: box-shadow 0.3s ease-out;
 }
-
 .websitename a {
     /* 此处用grow是为了让a的范围填充整个box */
     flex-grow: 1;
     border-radius: inherit;
     text-decoration: none;
     transition: all 0.3s ease;
-    color: var(--text-color-dark);
+    color: var(--ft-color);
 }
 
 /* .websitename a:hover {
@@ -340,77 +274,6 @@ body {
     border-radius: inherit;
     background: #4e70aa
 } */
-
-.old-days {
-    padding: 15px 0;
-    margin-top: 10px;
-    border-radius: 10px;
-    background-color: var(--box-color);
-
-    max-width: 620px;
-    /* height: 300px; */
-}
-
-.old-days-title {
-    padding-left: 16px;
-
-    color: var(--text-color-light);
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.old-days-content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 15px 20px;
-}
-
-.old-days-img-box {
-    display: flex;
-    justify-content: center;
-    height: 180px;
-    width: 320px;
-    border-radius: 10px;
-    z-index: 1;
-    overflow: hidden;
-}
-
-@keyframes scaleAnimation {
-    0% {
-        transform: scale(1.3);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-.old-days-img-box img {
-    max-height: 100%;
-    max-width: 100%;
-    border-radius: 10px;
-
-    animation: scaleAnimation 5s linear;
-    transition: transform 5s;
-}
-
-.old-days-text-box {
-    flex: 1;
-    margin: 0px 10px;
-    color: var(--text-color-light);
-}
-
-.old-days-date {
-    font-size: 18px;
-    margin: 8px 0;
-}
-
-.old-days-text {
-    padding-left: 5px;
-    font-size: 14px;
-    font-weight: 400;
-}
 
 .footer {
     display: flex;
@@ -424,7 +287,6 @@ body {
     border-top-left-radius: 10px;
     background-color: var(--fr-color); */
 }
-
 .footer-text {
     flex-grow: 1;
 
@@ -440,7 +302,7 @@ body {
 @media only screen and (max-width: 1350px) and (min-width: 1040px) {
 
     .websites {
-        width: 400px;
+        width: 300px;
     }
 
     .yiyan-box {
@@ -460,7 +322,7 @@ body {
     }
 
     .websites {
-        width: 400px;
+        width: 300px;
     }
 }
 
